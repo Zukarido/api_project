@@ -1,0 +1,20 @@
+<!-- image_upload.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br>
+
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+        <br>
+        {{ form.image }}
+        <button type="submit">Upload Image</button>
+    </form>
+</body>
+</html>
